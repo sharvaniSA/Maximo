@@ -112,17 +112,38 @@ function applyColor(hour) {
 
   colorInput.value = '';
   tagInput.value = '';
-}function applyColor(hour) {
+}
+
+// function applyColor(hour) {
+//   const colorInput = document.getElementById('color');
+//   const tagInput = document.getElementById('tag');
+//   const selectedColor = colorInput.value;
+//   const selectedTag = tagInput.value;
+
+
+//   const hourBlock = document.querySelector(`[data-hour="${hour}"]`);
+//   hourBlock.style.backgroundColor = selectedColor;
+//   hourBlock.textContent = selectedTag;
+
+
+//   const colorPicker = document.querySelector('.color-picker');
+//   colorPicker.style.display = 'none';
+
+//   colorInput.value = '';
+//   tagInput.value = '';
+// }
+function applyColor(hour) {
   const colorInput = document.getElementById('color');
   const tagInput = document.getElementById('tag');
   const selectedColor = colorInput.value;
   const selectedTag = tagInput.value;
 
-
   const hourBlock = document.querySelector(`[data-hour="${hour}"]`);
   hourBlock.style.backgroundColor = selectedColor;
   hourBlock.textContent = selectedTag;
 
+  // Set the title attribute for hover effect
+  hourBlock.setAttribute('title', selectedTag);
 
   const colorPicker = document.querySelector('.color-picker');
   colorPicker.style.display = 'none';
